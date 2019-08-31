@@ -1,1 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User</title>
+</head>
+<body>
 
+	<div class="row">    
+		<div class="col-lg-12">        
+			<div class="panel panel-default">
+			<div class="panel-heading">
+				<h1>Data Users</h1>
+			</div>            
+			<div class="panel-body" style="display: block;">                
+				<div class="col-md-12">       
+					<div class="content-box-large">        
+						<div class="panel-header">
+						<div class="panel-title">	
+						</div>
+						<div class="panel-body">
+							<a href="<?= $this->url->get('users/userscreate') ?>" class="btn btn-success"><i class="glyphicon glyphicon-plus"></i> Users</a>
+							<table class="table table-bordered">
+								<thead>
+									<tr class="success">
+										<th>ID Users</th>
+										<th>Nama</th>
+										<th>Username</th>
+										<th>Password</th>
+										<th>Action</th>
+									</tr>
+								</thead>
+								<tbody>
+								<?php foreach ($users as $user): ?>
+									<tr>
+										<td><?= $user->id_users ?></td>	<!--is_users adalah id_users field database-->
+										<td><?= $user->nama ?></td> 	<!--is_users adalah nama field database-->
+										<td><?= $user->username ?></td>	<!--is_users adalah username field database-->
+										<td><?= $user->password ?></td>
+										<td >
+											<a href="<?= $this->url->get('users/edit/'.$user->id_users) ?>" class="btn btn-info"><i class="glyphicon glyphicon-edit"></i></a>
+											<a href="<?= $this->url->get('users/delete/'.$user->id_users) ?>" class="btn btn-danger"> <i class="glyphicon glyphicon-trash"></i> </a>
+										</td>
+									</tr>	
+								<?php endforeach ?>
+								</tbody>
+							</table>
+						</div>
+						</div>
+					</div>                
+				</div>            
+			</div>        
+			</div>    
+		</div>
+	</div>
+
+</body>
+</html>
