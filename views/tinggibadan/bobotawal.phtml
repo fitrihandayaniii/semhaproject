@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tinggi Badan</title>
+</head>
+<body>
+
+	<div class="row">    
+		<div class="col-lg-12">        
+			<div class="panel panel-default">            
+				<div class="panel-heading">
+                    <h1>Bobot Awal Indeks Antropometri Tinggi Badan Menurut Umur</h1>
+                </div>             
+                <div class="panel-body" style="display: block;">                
+                    <div class="col-md-12">                        
+					<div class="content-box-large">
+					<div class="panel-header">
+					<div class="panel-title">
+					</div>
+						
+					<!--Start Bobot Awal-->	
+					<div class="panel-body">
+						<a href="<?= $this->url->get('tinggibadan') ?>" class="btn btn-default"><i class="glyphicon glyphicon-eye-open"></i> Data Tinggi Badan</a>
+                        <a href="<?= $this->url->get('tinggibadan/normalisasi') ?>" class="btn btn-default"><i class="glyphicon glyphicon-eye-open"></i> Normalisasi</a>
+                        <a href="<?= $this->url->get('tinggibadan/pembagiantb') ?>" class="btn btn-default"><i class="glyphicon glyphicon-eye-open"></i> Pembagian Data</a>
+                        <a href="<?= $this->url->get('tinggibadan/bobotawal') ?>" class="btn btn-default active"  style="color: white; background-color: #5bc0de; background-color: #5bc0de"><i class="glyphicon glyphicon-eye-open"></i> Inisialisasi Bobot Awal</a>
+						<?php 
+							// $phql = 'SELECT * FROM tinggibadan group by x1 order by x1 limit 2' ;
+							// $px1 = $this->modelsManager->executeQuery($phql);
+
+							$w1x1=Tinggibadan::find([
+								'conditions' => 'target=1',
+								'order' => 'x1',
+								'limit' => '2',
+							]);
+							$w1x2=Tinggibadan::find([
+								'conditions' => 'target=1',
+								'order' => 'x2',
+								'limit' => '2',
+							]);
+							$w1x3=Tinggibadan::find([
+								'conditions' => 'target=1',
+								'order' => 'x3',
+								'limit' => '2',
+							]);
+							$w1x4=Tinggibadan::find([
+								'conditions' => 'target=1',
+								'order' => 'x4',
+								'limit' => '2',
+							]);
+							$w1x5=Tinggibadan::find([
+								'conditions' => 'target=1',
+								'order' => 'x5',
+								'limit' => '2',
+							]);
+							$w1x6=Tinggibadan::find([
+								'conditions' => 'target=1',
+								'order' => 'x6',
+								'limit' => '2',
+							]);
+							$w1x7=Tinggibadan::find([
+								'conditions' => 'target=1',
+								'order' => 'x7',
+								'limit' => '2',
+							]);
+							$w1x8=Tinggibadan::find([
+								'conditions' => 'target=1',
+								'order' => 'x8',
+								'limit' => '2',
+							]);
+
+
+							$no = 1;
+							foreach ($w1x1 as $key => $value) {
+								if($no == 1){
+									$w11x1 = $value->x1;
+								}
+								elseif($no == 2){
+									$w12x1 = $value->x1;
+								}
+								else{
+									$w13x1 = $value->x1;
+								}
+								$no++;
+							}
+							$no = 1;
+							foreach ($w1x2 as $key => $value) {
+								if($no == 1){
+									$w11x2 = $value->x2;
+								}
+								elseif($no == 2){
+									$w12x2 = $value->x2;
+								}
+								else{
+									$w13x2 = $value->x2;
+									// echo $w11x2;
+								}
+								//echo $value->x2."<br>";
+								$no++;
+							}
+							$no = 1;
+							foreach ($w1x3 as $key => $value) {
+								if($no == 1){
+									$w11x3 = $value->x3;
+								}
+								elseif($no == 2){
+									$w12x3 = $value->x3;
+								}
+								else{
+									$w13x3 = $value->x3;
+								}
+								$no++;
+							}
+							$no = 1;
+							foreach ($w1x4 as $key => $value) {
+								if($no == 1){
+									$w11x4 = $value->x4;
+								}
+								elseif($no == 2){
+									$w12x4 = $value->x4;
+								}
+								else{
+									$w13x4 = $value->x4;
+								}
+								$no++;
+							}
+							$no = 1;
+							foreach ($w1x5 as $key => $value) {
+								if($no == 1){
+									$w11x5 = $value->x5;
+								}
+								elseif($no == 2){
+									$w12x5 = $value->x5;
+								}
+								else{
+									$w13x5 = $value->x5;
+								}
+								$no++;
+							}
+							$no = 1;
+							foreach ($w1x6 as $key => $value) {
+								if($no == 1){
+									$w11x6 = $value->x6;
+								}
+								elseif($no == 2){
+									$w12x6 = $value->x6;
+								}
+								else{
+									$w13x6 = $value->x6;
+								}
+								$no++;
+							}
+							$no = 1;
+							foreach ($w1x7 as $key => $value) {
+								if($no == 1){
+									$w11x7 = $value->x7;
+								}
+								elseif($no == 2){
+									$w12x7 = $value->x7;
+								}
+								else{
+									$w13x7 = $value->x7;
+								}
+								$no++;
+							}
+							$no = 1;
+							foreach ($w1x8 as $key => $value) {
+								if($no == 1){
+									$w11x8 = $value->x8;
+								}
+								elseif($no == 2){
+									$w12x8 = $value->x8;
+								}
+								else{
+									$w13x8 = $value->x8;
+								}
+								$no++;
+							}
+
+
+							//Bobobt ke 2
+							$w2x1=Tinggibadan::find([
+								'conditions' => 'target=2',
+								'order' => 'x1',
+								'limit' => '2',
+							]);
+							$w2x2=Tinggibadan::find([
+								'conditions' => 'target=2',
+								'order' => 'x2',
+								'limit' => '2',
+							]);
+							$w2x3=Tinggibadan::find([
+								'conditions' => 'target=2',
+								'order' => 'x3',
+								'limit' => '2',
+							]);
+							$w2x4=Tinggibadan::find([
+								'conditions' => 'target=2',
+								'order' => 'x4',
+								'limit' => '2',
+							]);
+							$w2x5=Tinggibadan::find([
+								'conditions' => 'target=2',
+								'order' => 'x5',
+								'limit' => '2',
+							]);
+							$w2x6=Tinggibadan::find([
+								'conditions' => 'target=2',
+								'order' => 'x6',
+								'limit' => '2',
+							]);
+							$w2x7=Tinggibadan::find([
+								'conditions' => 'target=2',
+								'order' => 'x7',
+								'limit' => '2',
+							]);
+							$w2x8=Tinggibadan::find([
+								'conditions' => 'target=2',
+								'order' => 'x8',
+								'limit' => '2',
+							]);
+
+							$no = 1;
+							foreach ($w2x1 as $key => $value) {
+								if($no == 1){
+									$w21x1 = $value->x1;
+								}
+								elseif($no == 2){
+									$w22x1 = $value->x1;
+								}
+								else{
+									$w23x1 = $value->x1;
+								}
+								$no++;
+							}
+							$no = 1;
+							foreach ($w2x2 as $key => $value) {
+								if($no == 1){
+									$w21x2 = $value->x2;
+								}
+								elseif($no == 2){
+									$w22x2 = $value->x2;
+								}
+								else{
+									$w23x2 = $value->x2;
+								}
+								$no++;
+							}
+							$no = 1;
+							foreach ($w2x3 as $key => $value) {
+								if($no == 1){
+									$w21x3 = $value->x3;
+								}
+								elseif($no == 2){
+									$w22x3 = $value->x3;
+								}
+								else{
+									$w23x3 = $value->x3;
+								}
+								$no++;
+							}
+							$no = 1;
+							foreach ($w2x4 as $key => $value) {
+								if($no == 1){
+									$w21x4 = $value->x4;
+								}
+								elseif($no == 2){
+									$w22x4 = $value->x4;
+								}
+								else{
+									$w23x4 = $value->x4;
+								}
+								$no++;
+							}
+							$no = 1;
+							foreach ($w2x5 as $key => $value) {
+								if($no == 1){
+									$w21x5 = $value->x5;
+								}
+								elseif($no == 2){
+									$w22x5 = $value->x5;
+								}
+								else{
+									$w23x5 = $value->x5;
+								}
+								$no++;
+							}
+							$no = 1;
+							foreach ($w2x6 as $key => $value) {
+								if($no == 1){
+									$w21x6 = $value->x6;
+								}
+								elseif($no == 2){
+									$w22x6 = $value->x6;
+								}
+								else{
+									$w23x6 = $value->x6;
+								}
+								$no++;
+							}
+							$no = 1;
+							foreach ($w2x7 as $key => $value) {
+								if($no == 1){
+									$w21x7 = $value->x7;
+								}
+								elseif($no == 2){
+									$w22x7 = $value->x7;
+								}
+								else{
+									$w23x7 = $value->x7;
+								}
+								$no++;
+							}
+							$no = 1;
+							foreach ($w2x8 as $key => $value) {
+								if($no == 1){
+									$w21x8 = $value->x8;
+								}
+								elseif($no == 2){
+									$w22x8 = $value->x8;
+								}
+								else{
+									$w23x8 = $value->x8;
+								}
+								$no++;
+							}
+
+
+
+							//Bobobt ke 3
+							$w3x1=Tinggibadan::find([
+								'conditions' => 'target=3',
+								'order' => 'x1',
+								'limit' => '2',
+							]);
+							$w3x2=Tinggibadan::find([
+								'conditions' => 'target=3',
+								'order' => 'x2',
+								'limit' => '2',
+							]);
+							$w3x3=Tinggibadan::find([
+								'conditions' => 'target=3',
+								'order' => 'x3',
+								'limit' => '2',
+							]);
+							$w3x4=Tinggibadan::find([
+								'conditions' => 'target=3',
+								'order' => 'x4',
+								'limit' => '2',
+							]);
+							$w3x5=Tinggibadan::find([
+								'conditions' => 'target=3',
+								'order' => 'x5',
+								'limit' => '2',
+							]);
+							$w3x6=Tinggibadan::find([
+								'conditions' => 'target=3',
+								'order' => 'x6',
+								'limit' => '2',
+							]);
+							$w3x7=Tinggibadan::find([
+								'conditions' => 'target=3',
+								'order' => 'x7',
+								'limit' => '2',
+							]);
+							$w3x8=Tinggibadan::find([
+								'conditions' => 'target=3',
+								'order' => 'x8',
+								'limit' => '2',
+							]);
+
+							$no = 1;
+							foreach ($w3x1 as $key => $value) {
+								if($no == 1){
+									$w31x1 = $value->x1;
+								}
+								elseif($no == 2){
+									$w32x1 = $value->x1;
+								}
+								else{
+									$w33x1 = $value->x1;
+								}
+								$no++;
+							}
+							$no = 1;
+							foreach ($w3x2 as $key => $value) {
+								if($no == 1){
+									$w31x2 = $value->x2;
+								}
+								elseif($no == 2){
+									$w32x2 = $value->x2;
+								}
+								else{
+									$w33x2 = $value->x2;
+								}
+								$no++;
+							}
+							$no = 1;
+							foreach ($w3x3 as $key => $value) {
+								if($no == 1){
+									$w31x3 = $value->x3;
+								}
+								elseif($no == 2){
+									$w32x3 = $value->x3;
+								}
+								else{
+									$w33x3 = $value->x3;
+								}
+								$no++;
+							}
+							$no = 1;
+							foreach ($w3x4 as $key => $value) {
+								if($no == 1){
+									$w31x4 = $value->x4;
+								}
+								elseif($no == 2){
+									$w32x4 = $value->x4;
+								}
+								else{
+									$w33x4 = $value->x4;
+								}
+								$no++;
+							}
+							$no = 1;
+							foreach ($w3x5 as $key => $value) {
+								if($no == 1){
+									$w31x5 = $value->x5;
+								}
+								elseif($no == 2){
+									$w32x5 = $value->x5;
+								}
+								else{
+									$w33x5 = $value->x5;
+								}
+								$no++;
+							}
+							$no = 1;
+							foreach ($w3x6 as $key => $value) {
+								if($no == 1){
+									$w31x6 = $value->x6;
+								}
+								elseif($no == 2){
+									$w32x6 = $value->x6;
+								}
+								else{
+									$w33x6 = $value->x6;
+								}
+								$no++;
+							}
+							$no = 1;
+							foreach ($w3x7 as $key => $value) {
+								if($no == 1){
+									$w31x7 = $value->x7;
+								}
+								elseif($no == 2){
+									$w32x7 = $value->x7;
+								}
+								else{
+									$w33x7 = $value->x7;
+								}
+								$no++;
+							}
+							$no = 1;
+							foreach ($w3x8 as $key => $value) {
+								if($no == 1){
+									$w31x8 = $value->x8;
+								}
+								elseif($no == 2){
+									$w32x8 = $value->x8;
+								}
+								else{
+									$w33x8 = $value->x8;
+								}
+								$no++;
+							}
+						?>
+		  					<table class="table table-hover">
+				              <thead>
+				                <tr class="success">
+				                  <th>Bobot | Variabel</th>
+				                  <th>X1</th>
+				                  <th>X2</th>
+				                  <th>X3</th>
+				                  <th>X4</th>
+				                  <th>X5</th>
+				                  <th>X6</th>
+				                  <th>X7</th>
+				                  <th>X8</th>
+				                  <th>Target</th>
+				                </tr>
+				              </thead>
+				              <tbody>
+				                <tr>
+				                  <td> W11 </td>
+				                  <td><?php echo $w11x1; ?> </td>
+				                  <td><?php echo $w11x2; ?> </td>
+				                  <td><?php echo $w11x3; ?> </td>
+				                  <td><?php echo $w11x4; ?> </td>
+				                  <td><?php echo $w11x5; ?> </td>
+				                  <td><?php echo $w11x6; ?> </td>
+				                  <td><?php echo $w11x7; ?> </td>
+				                  <td><?php echo $w11x8; ?> </td>
+				                  <td> 1 </td>
+				                </tr>
+				                <tr>
+				                  <td>W12</td>
+				                  <td> <?php echo $w12x1; ?> </td>
+				                  <td> <?php echo $w12x2; ?></td>
+				                  <td> <?php echo $w12x3; ?></td>
+				                  <td> <?php echo $w12x4; ?></td>
+				                  <td> <?php echo $w12x5; ?></td>
+				                  <td> <?php echo $w12x6; ?></td>
+				                  <td> <?php echo $w12x7; ?></td>
+				                  <td> <?php echo $w12x8; ?></td>
+				                  <td> 1 </td>
+				                </tr>
+				                <tr>
+				                  <td>W21</td>
+				                  <td><?php echo $w21x1; ?> </td>
+				                  <td><?php echo $w21x2; ?> </td>
+				                  <td><?php echo $w21x3; ?> </td>
+				                  <td><?php echo $w21x4; ?> </td>
+				                  <td><?php echo $w21x5; ?> </td>
+				                  <td><?php echo $w21x6; ?> </td>
+				                  <td><?php echo $w21x7; ?> </td>
+				                  <td><?php echo $w21x8; ?> </td>
+				                  <td> 2 </td>
+				                </tr>
+				                <tr>
+				                  <td>W22</td>
+				                  <td><?php echo $w22x1; ?> </td>
+				                  <td><?php echo $w22x2; ?> </td>
+				                  <td><?php echo $w22x3; ?> </td>
+				                  <td><?php echo $w22x4; ?> </td>
+				                  <td><?php echo $w22x5; ?> </td>
+				                  <td><?php echo $w22x6; ?> </td>
+				                  <td><?php echo $w22x7; ?> </td>
+				                  <td><?php echo $w22x8; ?> </td>
+				                  <td> 2 </td>
+				                </tr>
+				                <tr>
+				                  <td>W31</td>
+				                  <td><?php echo $w31x1; ?> </td>
+				                  <td><?php echo $w31x2; ?> </td>
+				                  <td><?php echo $w31x3; ?> </td>
+				                  <td><?php echo $w31x4; ?> </td>
+				                  <td><?php echo $w31x5; ?> </td>
+				                  <td><?php echo $w31x6; ?> </td>
+				                  <td><?php echo $w31x7; ?> </td>
+				                  <td><?php echo $w31x8; ?> </td>
+				                  <td> 3 </td>
+				                </tr>
+				                <tr>
+				                  <td>W32</td>
+				                  <td><?php echo $w32x1; ?> </td>
+				                  <td><?php echo $w32x2; ?> </td>
+				                  <td><?php echo $w32x3; ?> </td>
+				                  <td><?php echo $w32x4; ?> </td>
+				                  <td><?php echo $w32x5; ?> </td>
+				                  <td><?php echo $w32x6; ?> </td>
+				                  <td><?php echo $w32x7; ?> </td>
+				                  <td><?php echo $w32x8; ?> </td>
+				                  <td> 3 </td>
+				                </tr>
+				                
+				              </tbody>
+				            </table>
+		  			</div>
+		  			<!--End Bobot Awal-->
+		  			
+					</div>
+					</div>
+					</div>            
+				</div>        
+			</div>    
+		</div>
+	</div>
+
+</body>
+</html>

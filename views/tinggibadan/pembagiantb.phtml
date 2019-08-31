@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tinggi Badan</title>
+</head>
+<body>
+    <div class="row">    
+        <div class="col-lg-12">        
+            <div class="panel panel-default">            
+                <div class="panel-heading">
+                    <h1>Pembagian Data Indeks Antropometri Tinggi Badan Menurut Umur</h1>
+                </div>             
+                <div class="panel-body" style="display: block;">                
+                    <div class="col-md-12">
+                        <div class="content-box-large">
+                        <div class="panel-header">
+                        <div class="panel-title">
+                        </div>
+                        
+                        <div class="panel-body">
+                            <a href="<?= $this->url->get('tinggibadan') ?>" class="btn btn-default"><i class="glyphicon glyphicon-eye-open"></i> Data Tinggi Badan</a>
+                            <a href="<?= $this->url->get('tinggibadan/normalisasi') ?>" class="btn btn-default"><i class="glyphicon glyphicon-eye-open"></i> Normalisasi</a>
+                            <a href="<?= $this->url->get('tinggibadan/pembagiantb') ?>" class="btn btn-default active"  style="color: white; background-color: #5bc0de; background-color: #5bc0de"><i class="glyphicon glyphicon-eye-open"></i> Pembagian Data</a>
+                            <a href="<?= $this->url->get('tinggibadan/bobotawal') ?>" class="btn btn-default"><i class="glyphicon glyphicon-eye-open"></i> Inisialisasi Bobot Awal</a>
+                            <br><br>
+                           
+                            <form class="form-horizontal" role="form">
+                                    <div class="form-group">
+                                    <label for="bagidata" class="col-sm-3 control-label">Pembagian Data Latih dan Data Uji</label>
+                                    <div class="col-sm-6">
+                                      <select class="form-control" id="bagidata" name="bagidata" >
+                                                    <option></option>
+                                                    <option value="90">Pembagian 90:10</option>
+                                                    <option value="80">Pembagian 80:20</option>
+                                    </select>
+                                    
+                                    </div>
+                                    <div class="col-sm-3">
+                                      <button type="submit" class="btn btn-primary">Proses</button>
+                                    </div> 
+                                  </div>
+                                </form>
+
+                            <?php 
+                                if(isset($_GET['bagidata'])): 
+                                    $jumlahdata = count($tinggibadan);
+                                    $bagidata = $_GET['bagidata'];
+                                    $latih = $jumlahdata * $bagidata /100;
+                                    $latih1 = number_format($latih/3);
+                                    $latih2 = number_format($latih/3);
+                                    $latih3 = $latih-($latih1+$latih2);
+                                    // echo number_format($latih);
+                                    // echo $latih1;
+                            ?>
+                            <div class="table-responsive">
+                            <table class="table table-bordered">
+                            <thead>
+                                <tr class="success">
+                                    <th>No</th>
+                                    <th>Nama</th>
+                                    <th>X1</th>
+                                    <th>X2</th>
+                                    <th>X3</th>
+                                    <th>X4</th>
+                                    <th>X5</th>
+                                    <th>X6</th>
+                                    <th>X7</th>
+                                    <th>X8</th>
+                                    <th>Target</th>
+                                    <th>Jenis Data</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php 
+                                    $no = 1;
+                                    $nolatih1 = 0;
+                                    $nolatih2 = 0;
+                                    $nolatih3 = 0; 
+                                    foreach ($tinggibadan as $tb): 
+                                ?>
+                                <tr>
+                                    <td><?= $no ?></td> 
+                                    <td><?= $tb->nama ?></td>
+                                    <td><?= $tb->x1 ?></td> 
+                                    <td><?= $tb->x2 ?></td>
+                                    <td><?= $tb->x3 ?></td>
+                                    <td><?= $tb->x4 ?></td>
+                                    <td><?= $tb->x5 ?></td>
+                                    <td><?= $tb->x6 ?></td>
+                                    <td><?= $tb->x7 ?></td>
+                                    <td><?= $tb->x8 ?></td>
+                                    <td><?= $tb->target ?></td>
+                                    <td>
+                                        <?php
+                                            // if($no <= $latih):
+                                            //     echo "latih";
+
+                                            // else:
+                                            //     echo "uji";
+                                            // endif;
+                                            $jenis = "Uji";
+
+
+                                            if($tb->target == "1")
+                                            {
+                                                if($nolatih1 < $latih1){
+                                                    $jenis = "Latih";
+                                                    $nolatih1++;
+                                                }
+                                            } elseif($tb->target == "2")
+                                            {
+                                                if($nolatih2 < $latih2){
+                                                    $jenis = "Latih";
+                                                    $nolatih2++;
+                                                }
+                                            }
+                                            else
+                                            {
+                                                if($nolatih3 < $latih3){
+                                                    $jenis = "Latih";
+                                                    $nolatih3++;
+                                                }
+
+                                            }
+                                            echo $jenis;
+
+                                            $cekbagitb = Pembagiantb::findFirst('id_balita="'.$tb->id_balita.'" and bagidata="'.$bagidata.'"');
+                                            // echo $bb-> id_balita;
+                                            if( isset($cekbagitb->id_pembagiantb))
+                                            {
+                                                
+                                                $bagitb= Pembagiantb::findFirst($cekbagitb->id_pembagiantb);
+                                            }
+                                            else 
+                                            {
+                                                $bagitb = new Pembagiantb();
+                                            }
+                                            
+                                            $bagitb->assign([
+                                                'id_balita' => $tb->id_balita,     
+                                                'x1' => $tb->x1,   
+                                                'x2' => $tb->x2,
+                                                'x3' => $tb->x3,
+                                                'x4' => $tb->x4,
+                                                'x5' => $tb->x5,
+                                                'x6' => $tb->x6,
+                                                'x7' => $tb->x7,
+                                                'x8' => $tb->x8,
+                                                'target' => $tb->target,
+                                                'jenisdata' => $jenis,
+                                                'bagidata' => $bagidata,
+
+                                            ]);
+
+                                            if ($bagitb->save()) {
+                                               
+                                            }
+                                        ?>
+
+                                    </td>
+                                    
+                                </tr>   
+                                <?php 
+                                    $no++;
+                                    endforeach; 
+                                ?>
+                            </tbody>
+                            </table>
+                            </div>
+
+                        <?php endif; ?>
+
+                        </div>
+                        </div>
+                        </div>
+                    </div>            
+                </div>        
+            </div>    
+        </div>
+    </div>
+
+</body>
+</html>

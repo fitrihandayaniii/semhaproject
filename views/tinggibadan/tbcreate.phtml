@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tinggi Badan</title>
+</head>
+<body>
+
+	<div class="row">    
+		<div class="col-lg-12">        
+			<div class="panel panel-default">            
+				<div class="panel-heading">
+                    <h1>Tambah Data Indeks Antropometri Tinggi Badan Menurut Umur</h1>
+                </div>             
+                <div class="panel-body" style="display: block;">                
+                    <div class="col-md-12">                        
+					<div class="content-box-large">
+					<div class="panel-heading">
+					<div class="panel-title">
+					</div>
+					<div class="panel-body">
+						<form action="" method="post">
+							<div class="form-group">
+								<label>Nama</label>
+								<input type="text" name="nama" class="form-control" >
+							</div>
+							<div class="form-group">
+								<label>Jenis Kelamin</label>
+								<select class="form-control" id="select-jk" type="text" name="jk">
+									<option></option>
+									<option>Laki-Laki</option>
+									<option>Perempuan</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label>Umur</label>
+								<input type="int" name="umur" placeholder="Bulan" class="form-control">
+							</div>
+							<div class="form-group">
+								<label>Tinggi Badan</label>
+								<input type="int" name="tinggi" placeholder="Cm" class="form-control">
+							</div>
+							<div class="form-group">
+								<label>Cara Ukur</label>
+								<select class="form-control" id="select-crukur" type="text" name="cr_ukur">
+									<option></option>
+									<option>Telentang</option>
+									<option>Berdiri</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label>Vitamin A</label>
+								<select class="form-control" id="select-vita" type="text" name="vit_a">
+									<option></option>
+									<option>Tidak</option>
+									<option>Ya</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label>Ekonomi</label>
+								<select class="form-control" id="select-ekonomi" type="text" name="ekonomi">
+									<option></option>
+									<option>Gakin</option>
+									<option>Non Gakin</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label>Pendidikan Ibu</label>
+								<select class="form-control" id="select-pendidikan" type="text" name="pendidikan_ibu">
+									<option></option>
+									<option>SMP</option>
+									<option>SMA</option>
+									<option>Perguruan Tinggi</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label>Pekerjaan Ayah</label>
+								<select class="form-control" id="select-pekerjaan" type="text" name="pekerjaan_ayah">
+									<option></option>
+									<option>Tani/Tukang</option>
+									<option>Wiraswasta</option>
+									<option>PNS</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label>Status Gizi</label>
+								<select class="form-control" id="select-statusgizi" type="text" name="status_gizi">
+									<option></option>
+									<option>SP</option>
+									<option>P</option>
+									<option>N</option>
+								</select>
+							</div>
+								<button class="btn btn-success"> <i class="glyphicon glyphicon-plus"></i> Tambah</a> </button>
+								<button class="btn btn-danger">
+									<a href="<?= $this->url->get('tinggibadan/index/')?>" ><i class="glyphicon glyphicon-remove"></i>Batal</a>
+								</button>										
+						</form>
+					</div>
+					</div>
+					</div>
+					</div>            
+				</div>        
+			</div>    
+		</div>
+	</div>
+
+</body>
+</html>
