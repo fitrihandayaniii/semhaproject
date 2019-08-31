@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tinggi Badan</title>
+</head>
+<body>
+	<!--Start Bobot Awal-->
+	<div class="row">    
+		<div class="col-lg-12">        
+			<div class="panel panel-default">            
+				<div class="panel-heading">
+                	<h2>Bobot Awal Pengujian Metode Learning Vector Quantization 3 untuk TB/U</h2>
+            	</div>             
+                <div class="panel-body" style="display: block;">                
+                    <div class="col-md-12">                        
+					<div class="content-box-large">
+					<div class="panel-heading">
+					<div class="panel-title">
+					</div>
+
+					<!--Start Bobot Awal-->	
+					<div class="panel-body">
+						<?php
+							$cekparameter = Parameter::findFirst('pembagian_data LIKE "%'.$pembagian.'%" and learning_rate LIKE "%'.$learning_rate.'%" and window LIKE "%'.$window.'%"');
+					        
+					        if( isset($cekparameter->id_parameter))
+					        {
+					            
+					            $id_parameter = $cekparameter->id_parameter;
+					        }
+					        // echo $id_parameter;
+
+					        $w11x1=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "11" and x= "1"'
+							]);
+							$w11x2=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "11" and x= "2"'
+							]);
+							$w11x3=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "11" and x= "3"'
+							]);
+							$w11x4=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "11" and x= "4"'
+							]);
+							$w11x5=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "11" and x= "5"'
+							]);
+							$w11x6=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "11" and x= "6"'
+							]);
+							$w11x7=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "11" and x= "7"'
+							]);
+							$w11x8=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "11" and x= "8"'
+							]);
+
+							$w12x1=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "12" and x= "1"'
+							]);
+							$w12x2=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "12" and x= "2"'
+							]);
+							$w12x3=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "12" and x= "3"'
+							]);
+							$w12x4=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "12" and x= "4"'
+							]);
+							$w12x5=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "12" and x= "5"'
+							]);
+							$w12x6=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "12" and x= "6"'
+							]);
+							$w12x7=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "12" and x= "7"'
+							]);
+							$w12x8=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "12" and x= "8"'
+							]);
+
+							$w21x1=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "21" and x= "1"'
+							]);
+							$w21x2=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "21" and x= "2"'
+							]);
+							$w21x3=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "21" and x= "3"'
+							]);
+							$w21x4=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "21" and x= "4"'
+							]);
+							$w21x5=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "21" and x= "5"'
+							]);
+							$w21x6=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "21" and x= "6"'
+							]);
+							$w21x7=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "21" and x= "7"'
+							]);
+							$w21x8=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "21" and x= "8"'
+							]);
+
+							$w22x1=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "22" and x= "1"'
+							]);
+							$w22x2=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "22" and x= "2"'
+							]);
+							$w22x3=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "22" and x= "3"'
+							]);
+							$w22x4=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "22" and x= "4"'
+							]);
+							$w22x5=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "22" and x= "5"'
+							]);
+							$w22x6=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "22" and x= "6"'
+							]);
+							$w22x7=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "22" and x= "7"'
+							]);
+							$w22x8=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "22" and x= "8"'
+							]);
+
+							$w31x1=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "31" and x= "1"'
+							]);
+							$w31x2=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "31" and x= "2"'
+							]);
+							$w31x3=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "31" and x= "3"'
+							]);
+							$w31x4=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "31" and x= "4"'
+							]);
+							$w31x5=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "31" and x= "5"'
+							]);
+							$w31x6=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "31" and x= "6"'
+							]);
+							$w31x7=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "31" and x= "7"'
+							]);
+							$w31x8=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "31" and x= "8"'
+							]);
+
+							$w32x1=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "32" and x= "1"'
+							]);
+							$w32x2=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "32" and x= "2"'
+							]);
+							$w32x3=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "32" and x= "3"'
+							]);
+							$w32x4=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "32" and x= "4"'
+							]);
+							$w32x5=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "32" and x= "5"'
+							]);
+							$w32x6=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "32" and x= "6"'
+							]);
+							$w32x7=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "32" and x= "7"'
+							]);
+							$w32x8=BobotAkhirTb::findFirst([
+								'conditions' => 'id_parameter="'.$id_parameter.'" and w= "32" and x= "8"'
+							]);
+
+							$w11x1=$w11x1->nilai;
+							$w11x2=$w11x2->nilai;
+							$w11x3=$w11x3->nilai;
+							$w11x4=$w11x4->nilai;
+							$w11x5=$w11x5->nilai;
+							$w11x6=$w11x6->nilai;
+							$w11x7=$w11x7->nilai;
+							$w11x8=$w11x8->nilai;
+
+							$w12x1=$w12x1->nilai;
+							$w12x2=$w12x2->nilai;
+							$w12x3=$w12x3->nilai;
+							$w12x4=$w12x4->nilai;
+							$w12x5=$w12x5->nilai;
+							$w12x6=$w12x6->nilai;
+							$w12x7=$w12x7->nilai;
+							$w12x8=$w12x8->nilai;
+
+
+							$w21x1=$w21x1->nilai;
+							$w21x2=$w21x2->nilai;
+							$w21x3=$w21x3->nilai;
+							$w21x4=$w21x4->nilai;
+							$w21x5=$w21x5->nilai;
+							$w21x6=$w21x6->nilai;
+							$w21x7=$w21x7->nilai;
+							$w21x8=$w21x8->nilai;
+
+							$w22x1=$w22x1->nilai;
+							$w22x2=$w22x2->nilai;
+							$w22x3=$w22x3->nilai;
+							$w22x4=$w22x4->nilai;
+							$w22x5=$w22x5->nilai;
+							$w22x6=$w22x6->nilai;
+							$w22x7=$w22x7->nilai;
+							$w22x8=$w22x8->nilai;
+
+							$w31x1=$w31x1->nilai;
+							$w31x2=$w31x2->nilai;
+							$w31x3=$w31x3->nilai;
+							$w31x4=$w31x4->nilai;
+							$w31x5=$w31x5->nilai;
+							$w31x6=$w31x6->nilai;
+							$w31x7=$w31x7->nilai;
+							$w31x8=$w31x8->nilai;
+
+							$w32x1=$w32x1->nilai;
+							$w32x2=$w32x2->nilai;
+							$w32x3=$w32x3->nilai;
+							$w32x4=$w32x4->nilai;
+							$w32x5=$w32x5->nilai;
+							$w32x6=$w32x6->nilai;
+							$w32x7=$w32x7->nilai;
+							$w32x8=$w32x8->nilai;
+
+
+							// echo $w11x1->nilai;
+						?>
+		  					<table class="table table-hover">
+				              <thead>
+				                <tr>
+				                  <th>Bobot | Variabel</th>
+				                  <th>X1</th>
+				                  <th>X2</th>
+				                  <th>X3</th>
+				                  <th>X4</th>
+				                  <th>X5</th>
+				                  <th>X6</th>
+				                  <th>X7</th>
+				                  <th>X8</th>
+				                  <th>Target</th>
+				                </tr>
+				              </thead>
+				              <tbody>
+				                <tr>
+				                  <td> W11 </td>
+				                  <td><?php echo $w11x1; ?> </td>
+				                  <td><?php echo $w11x2; ?> </td>
+				                  <td><?php echo $w11x3; ?> </td>
+				                  <td><?php echo $w11x4; ?> </td>
+				                  <td><?php echo $w11x5; ?> </td>
+				                  <td><?php echo $w11x6; ?> </td>
+				                  <td><?php echo $w11x7; ?> </td>
+				                  <td><?php echo $w11x8; ?> </td>
+				                  <td> 1 </td>
+				                </tr>
+				                <tr>
+				                  <td>W12</td>
+				                  <td> <?php echo $w12x1; ?> </td>
+				                  <td> <?php echo $w12x2; ?></td>
+				                  <td> <?php echo $w12x3; ?></td>
+				                  <td> <?php echo $w12x4; ?></td>
+				                  <td> <?php echo $w12x5; ?></td>
+				                  <td> <?php echo $w12x6; ?></td>
+				                  <td> <?php echo $w12x7; ?></td>
+				                  <td> <?php echo $w12x8; ?></td>
+				                  <td> 1 </td>
+				                </tr>
+				                <tr>
+				                  <td>W21</td>
+				                  <td><?php echo $w21x1; ?> </td>
+				                  <td><?php echo $w21x2; ?> </td>
+				                  <td><?php echo $w21x3; ?> </td>
+				                  <td><?php echo $w21x4; ?> </td>
+				                  <td><?php echo $w21x5; ?> </td>
+				                  <td><?php echo $w21x6; ?> </td>
+				                  <td><?php echo $w21x7; ?> </td>
+				                  <td><?php echo $w21x8; ?> </td>
+				                  <td> 2 </td>
+				                </tr>
+				                <tr>
+				                  <td>W22</td>
+				                  <td><?php echo $w22x1; ?> </td>
+				                  <td><?php echo $w22x2; ?> </td>
+				                  <td><?php echo $w22x3; ?> </td>
+				                  <td><?php echo $w22x4; ?> </td>
+				                  <td><?php echo $w22x5; ?> </td>
+				                  <td><?php echo $w22x6; ?> </td>
+				                  <td><?php echo $w22x7; ?> </td>
+				                  <td><?php echo $w22x8; ?> </td>
+				                  <td> 2 </td>
+				                </tr>
+				                <tr>
+				                  <td>W31</td>
+				                  <td><?php echo $w31x1; ?> </td>
+				                  <td><?php echo $w31x2; ?> </td>
+				                  <td><?php echo $w31x3; ?> </td>
+				                  <td><?php echo $w31x4; ?> </td>
+				                  <td><?php echo $w31x5; ?> </td>
+				                  <td><?php echo $w31x6; ?> </td>
+				                  <td><?php echo $w31x7; ?> </td>
+				                  <td><?php echo $w31x8; ?> </td>
+				                  <td> 3 </td>
+				                </tr>
+				                <tr>
+				                  <td>W32</td>
+				                  <td><?php echo $w32x1; ?> </td>
+				                  <td><?php echo $w32x2; ?> </td>
+				                  <td><?php echo $w32x3; ?> </td>
+				                  <td><?php echo $w32x4; ?> </td>
+				                  <td><?php echo $w32x5; ?> </td>
+				                  <td><?php echo $w32x6; ?> </td>
+				                  <td><?php echo $w32x7; ?> </td>
+				                  <td><?php echo $w32x8; ?> </td>
+				                  <td> 3 </td>
+				                </tr>
+				                
+				              </tbody>
+				            </table>
+		  			</div>
+		  			<!--End Bobot Awal-->
+
+					</div>
+					</div>
+					</div>            
+				</div>        
+			</div>    
+		</div>
+	</div>
+	<!--End Bobot Awal-->
+
+    <div class="row">    
+        <div class="col-lg-12">        
+            <div class="panel panel-default">            
+                <div class="panel-heading">
+                	<h2>Proses Pengujian Metode Learning Vector Quantization 3 untuk TB/U</h2>
+            	</div>             
+                <div class="panel-body" style="display: block;">                
+                    <div class="col-md-12">
+                        <div class="content-box-large">
+                        <div class="panel-header">
+                        <div class="panel-title">
+                        </div>
+                        
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                            	<?php 
+                            		$alfa = $learning_rate;
+                            		$nilai_e = $window;
+
+                            		for($i=1; $i<=1; $i++):
+                            			if($alfa > 0.01):
+                            				$at1 = 0;
+                            				$bf1 = 0;
+                            				$cf1 = 0;
+
+                            				$df2 = 0;
+                            				$et2 = 0;
+                            				$ff2 = 0;
+
+                            				$gf3 = 0;
+                            				$hf3 = 0;
+                            				$it3 = 0;
+
+                            			?>
+                            			<h4>Epoch <?php echo $i; ?></h4>
+                            			<h4>Learning rate <?php echo $alfa; ?></h4>
+                            			<h4>Window <?php echo $nilai_e; ?></h4>
+
+                            			<table class="table table-bordered">
+				                            <thead>
+				                                <tr class="success">
+				                                    <th>No</th>
+				                                    <th>Id Balita</th>
+				                                    <th>X1</th>
+				                                    <th>X2</th>
+				                                    <th>X3</th>
+				                                    <th>X4</th>
+				                                    <th>X5</th>
+				                                    <th>X6</th>
+				                                    <th>X7</th>
+				                                    <th>X8</th>
+				                                    <th>Target</th>
+				                                    <th width="30%">Tahapan Pelatihan</th>
+				                                    <th>Hasil</th>
+				                                </tr>
+				                            </thead>
+				                            <tbody>
+				                                <?php 
+				                                	$no=1; 
+				                                	foreach ($tinggibadan as $tb): 
+				                                ?>
+				                                <tr>
+				                                    <td><?= $no ?></td> 
+				                                    <td><?= $tb->id_balita ?></td>
+				                                    <td>
+				                                    	<?php 
+				                                    		$ctrl=new PelatihanController;
+				                                    		$kuadratw11x1 = $ctrl->nilai11tb($tb->x1, $w11x1, $w12x1, $w21x1, $w22x1, $w31x1, $w32x1); 
+				                                    		$kuadratw12x1 = $ctrl->nilai12tb($tb->x1, $w11x1, $w12x1, $w21x1, $w22x1, $w31x1, $w32x1); 
+				                                    		$kuadratw21x1 = $ctrl->nilai21tb($tb->x1, $w11x1, $w12x1, $w21x1, $w22x1, $w31x1, $w32x1);
+				                                    		$kuadratw22x1 = $ctrl->nilai22tb($tb->x1, $w11x1, $w12x1, $w21x1, $w22x1, $w31x1, $w32x1);
+				                                    		$kuadratw31x1 = $ctrl->nilai31tb($tb->x1, $w11x1, $w12x1, $w21x1, $w22x1, $w31x1, $w32x1); 
+				                                    		$kuadratw32x1 = $ctrl->nilai32tb($tb->x1, $w11x1, $w12x1, $w21x1, $w22x1, $w31x1, $w32x1);
+				                                    	?>
+				                                    </td> 
+				                                    <td>
+				                                    	<?php 
+					                                    	$kuadratw11x2 = $ctrl->nilai11tb($tb->x2, $w11x2, $w12x2, $w21x2, $w22x2, $w31x2, $w32x2); 
+				                                    		$kuadratw12x2 = $ctrl->nilai12tb($tb->x2, $w11x2, $w12x2, $w21x2, $w22x2, $w31x2, $w32x2); 
+				                                    		$kuadratw21x2 = $ctrl->nilai21tb($tb->x2, $w11x2, $w12x2, $w21x2, $w22x2, $w31x2, $w32x2);
+				                                    		$kuadratw22x2 = $ctrl->nilai22tb($tb->x2, $w11x2, $w12x2, $w21x2, $w22x2, $w31x2, $w32x2);
+				                                    		$kuadratw31x2 = $ctrl->nilai31tb($tb->x2, $w11x2, $w12x2, $w21x2, $w22x2, $w31x2, $w32x2); 
+				                                    		$kuadratw32x2 = $ctrl->nilai32tb($tb->x2, $w11x2, $w12x2, $w21x2, $w22x2, $w31x2, $w32x2);
+			                                    		?>
+				                                    </td>
+				                                    <td>
+				                                    	<?php 
+					                                    	$kuadratw11x3 = $ctrl->nilai11tb($tb->x3, $w11x3, $w12x3, $w21x3, $w22x3, $w31x3, $w32x3); 
+				                                    		$kuadratw12x3 = $ctrl->nilai12tb($tb->x3, $w11x3, $w12x3, $w21x3, $w22x3, $w31x3, $w32x3); 
+				                                    		$kuadratw21x3 = $ctrl->nilai21tb($tb->x3, $w11x3, $w12x3, $w21x3, $w22x3, $w31x3, $w32x3);
+				                                    		$kuadratw22x3 = $ctrl->nilai22tb($tb->x3, $w11x3, $w12x3, $w21x3, $w22x3, $w31x3, $w32x3);
+				                                    		$kuadratw31x3 = $ctrl->nilai31tb($tb->x3, $w11x3, $w12x3, $w21x3, $w22x3, $w31x3, $w32x3); 
+				                                    		$kuadratw32x3 = $ctrl->nilai32tb($tb->x3, $w11x3, $w12x3, $w21x3, $w22x3, $w31x3, $w32x3);
+			                                    		?>
+				                                    </td>
+				                                    <td>
+				                                    	<?php 
+					                                    	$kuadratw11x4 = $ctrl->nilai11tb($tb->x4, $w11x4, $w12x4, $w21x4, $w22x4, $w31x4, $w32x4); 
+				                                    		$kuadratw12x4 = $ctrl->nilai12tb($tb->x4, $w11x4, $w12x4, $w21x4, $w22x4, $w31x4, $w32x4); 
+				                                    		$kuadratw21x4 = $ctrl->nilai21tb($tb->x4, $w11x4, $w12x4, $w21x4, $w22x4, $w31x4, $w32x4);
+				                                    		$kuadratw22x4 = $ctrl->nilai22tb($tb->x4, $w11x4, $w12x4, $w21x4, $w22x4, $w31x4, $w32x4);
+				                                    		$kuadratw31x4 = $ctrl->nilai31tb($tb->x4, $w11x4, $w12x4, $w21x4, $w22x4, $w31x4, $w32x4); 
+				                                    		$kuadratw32x4 = $ctrl->nilai32tb($tb->x4, $w11x4, $w12x4, $w21x4, $w22x4, $w31x4, $w32x4);
+			                                    		?>
+				                                    </td>
+				                                    <td>
+				                                    	<?php 
+					                                    	$kuadratw11x5 = $ctrl->nilai11tb($tb->x5, $w11x5, $w12x5, $w21x5, $w22x5, $w31x5, $w32x5); 
+				                                    		$kuadratw12x5 = $ctrl->nilai12tb($tb->x5, $w11x5, $w12x5, $w21x5, $w22x5, $w31x5, $w32x5); 
+				                                    		$kuadratw21x5 = $ctrl->nilai21tb($tb->x5, $w11x5, $w12x5, $w21x5, $w22x5, $w31x5, $w32x5);
+				                                    		$kuadratw22x5 = $ctrl->nilai22tb($tb->x5, $w11x5, $w12x5, $w21x5, $w22x5, $w31x5, $w32x5);
+				                                    		$kuadratw31x5 = $ctrl->nilai31tb($tb->x5, $w11x5, $w12x5, $w21x5, $w22x5, $w31x5, $w32x5); 
+				                                    		$kuadratw32x5 = $ctrl->nilai32tb($tb->x5, $w11x5, $w12x5, $w21x5, $w22x5, $w31x5, $w32x5);
+			                                    		?>
+				                                    </td>
+				                                    <td>
+				                                    	<?php 
+					                                    	$kuadratw11x6 = $ctrl->nilai11tb($tb->x6, $w11x6, $w12x6, $w21x6, $w22x6, $w31x6, $w32x6); 
+				                                    		$kuadratw12x6 = $ctrl->nilai12tb($tb->x6, $w11x6, $w12x6, $w21x6, $w22x6, $w31x6, $w32x6); 
+				                                    		$kuadratw21x6 = $ctrl->nilai21tb($tb->x6, $w11x6, $w12x6, $w21x6, $w22x6, $w31x6, $w32x6);
+				                                    		$kuadratw22x6 = $ctrl->nilai22tb($tb->x6, $w11x6, $w12x6, $w21x6, $w22x6, $w31x6, $w32x6);
+				                                    		$kuadratw31x6 = $ctrl->nilai31tb($tb->x6, $w11x6, $w12x6, $w21x6, $w22x6, $w31x6, $w32x6); 
+				                                    		$kuadratw32x6 = $ctrl->nilai32tb($tb->x6, $w11x6, $w12x6, $w21x6, $w22x6, $w31x6, $w32x6);
+			                                    		?>
+				                                    </td>
+				                                    <td>
+				                                    	<?php 
+					                                    	$kuadratw11x7 = $ctrl->nilai11tb($tb->x7, $w11x7, $w12x7, $w21x7, $w22x7, $w31x7, $w32x7); 
+				                                    		$kuadratw12x7 = $ctrl->nilai12tb($tb->x7, $w11x7, $w12x7, $w21x7, $w22x7, $w31x7, $w32x7); 
+				                                    		$kuadratw21x7 = $ctrl->nilai21tb($tb->x7, $w11x7, $w12x7, $w21x7, $w22x7, $w31x7, $w32x7);
+				                                    		$kuadratw22x7 = $ctrl->nilai22tb($tb->x7, $w11x7, $w12x7, $w21x7, $w22x7, $w31x7, $w32x7);
+				                                    		$kuadratw31x7 = $ctrl->nilai31tb($tb->x7, $w11x7, $w12x7, $w21x7, $w22x7, $w31x7, $w32x7); 
+				                                    		$kuadratw32x7 = $ctrl->nilai32tb($tb->x7, $w11x7, $w12x7, $w21x7, $w22x7, $w31x7, $w32x7);
+			                                    		?>
+				                                    </td>
+				                                    <td>
+				                                    	<?php 
+					                                    	$kuadratw11x8 = $ctrl->nilai11tb($tb->x8, $w11x8, $w12x8, $w21x8, $w22x8, $w31x8, $w32x8); 
+				                                    		$kuadratw12x8 = $ctrl->nilai12tb($tb->x8, $w11x8, $w12x8, $w21x8, $w22x8, $w31x8, $w32x8); 
+				                                    		$kuadratw21x8 = $ctrl->nilai21tb($tb->x8, $w11x8, $w12x8, $w21x8, $w22x8, $w31x8, $w32x8);
+				                                    		$kuadratw22x8 = $ctrl->nilai22tb($tb->x8, $w11x8, $w12x8, $w21x8, $w22x8, $w31x8, $w32x8);
+				                                    		$kuadratw31x8 = $ctrl->nilai31tb($tb->x8, $w11x8, $w12x8, $w21x8, $w22x8, $w31x8, $w32x8); 
+				                                    		$kuadratw32x8 = $ctrl->nilai32tb($tb->x8, $w11x8, $w12x8, $w21x8, $w22x8, $w31x8, $w32x8);
+			                                    		?>
+				                                    </td>
+				                                    <td><?= $tb->target ?></td>
+				                                    <td>
+				                                    	<?php
+				                                    		$array_d = [];
+				                                    	?>
+				                                    	W11 = <?php
+				                                    		
+				                                    		$hasilw11 = ($kuadratw11x1 + $kuadratw11x2 + $kuadratw11x3 + $kuadratw11x4 + $kuadratw11x5 + $kuadratw11x6 + $kuadratw11x7 + $kuadratw11x8);
+				                                    		echo $hasilw11.' = '.sqrt($hasilw11);
+				                                    		$array_target = [];
+				                                    		$array_target['hasil'] = sqrt($hasilw11);
+				                                    		$array_target['target'] = '1';
+				                                    		$array_target['urutan'] = '1';
+
+				                                    		array_push($array_d, $array_target);
+				                                    	?>
+				                                    	<br>
+				                                    	W12 = <?php  
+				                                    		$hasilw12 = ($kuadratw12x1 + $kuadratw12x2 + $kuadratw12x3 + $kuadratw12x4 + $kuadratw12x5 + $kuadratw12x6 + $kuadratw12x7 + $kuadratw12x8);
+				                                    		echo $hasilw12.' = '.sqrt($hasilw12);
+															$array_target = [];
+				                                    		$array_target['hasil'] = sqrt($hasilw12);
+				                                    		$array_target['target'] = '1';
+				                                    		$array_target['urutan'] = '2';
+				                                    		
+				                                    		array_push($array_d, $array_target);
+				                                    	?>
+				                                    	<br>
+				                                    	W21 = <?php  
+				                                    		$hasilw21 = ($kuadratw21x1 + $kuadratw21x2 + $kuadratw21x3 + $kuadratw21x4 + $kuadratw21x5 + $kuadratw21x6 + $kuadratw21x7 + $kuadratw21x8);
+				                                    		echo $hasilw21.' = '.sqrt($hasilw21);
+				                                    		$array_target = [];
+				                                    		$array_target['hasil'] = sqrt($hasilw21);
+				                                    		$array_target['target'] = '2';
+				                                    		$array_target['urutan'] = '1';
+
+				                                    		
+				                                    		array_push($array_d, $array_target);
+				                                    	?>
+				                                    	<br>
+				                                    	W22 = <?php  
+				                                    		$hasilw22 = ($kuadratw22x1 + $kuadratw22x2 + $kuadratw22x3 + $kuadratw22x4 + $kuadratw22x5 + $kuadratw22x6 + $kuadratw22x7 + $kuadratw22x8);
+				                                    		echo $hasilw22.' = '.sqrt($hasilw22);
+				                                    		$array_target = [];
+				                                    		$array_target['hasil'] = sqrt($hasilw22);
+				                                    		$array_target['target'] = '2';
+				                                    		$array_target['urutan'] = '2';
+
+
+				                                    		array_push($array_d, $array_target);
+				                                    	?>
+				                                    	<br>
+				                                    	W31 = <?php  
+				                                    		$hasilw31 = ($kuadratw31x1 + $kuadratw31x2 + $kuadratw31x3 + $kuadratw31x4 + $kuadratw31x5 + $kuadratw31x6 + $kuadratw31x7 + $kuadratw31x8);
+				                                    		echo $hasilw31.' = '.sqrt($hasilw31);
+				                                    		$array_target = [];
+				                                    		$array_target['hasil'] = sqrt($hasilw31);
+				                                    		$array_target['target'] = '3';
+				                                    		$array_target['urutan'] = '1';
+
+				                                    		
+				                                    		array_push($array_d, $array_target);
+				                                    	?>
+				                                    	<br>
+				                                    	W32 = <?php  
+				                                    		$hasilw32 = ($kuadratw32x1 + $kuadratw32x2 + $kuadratw32x3 + $kuadratw32x4 + $kuadratw32x5 + $kuadratw32x6 + $kuadratw32x7 + $kuadratw32x8);
+				                                    		echo $hasilw32.' = '.sqrt($hasilw32);
+				                                    		$array_target = [];
+				                                    		$array_target['hasil'] = sqrt($hasilw32);
+				                                    		$array_target['target'] = '3';
+				                                    		$array_target['urutan'] = '2';
+
+				                                    		array_push($array_d, $array_target);
+				                                    
+				                                    		echo "<br>";
+				                                    		echo "<br>";
+				                                    		//print_r($array_d);
+				                                    		echo "<br>";
+				                                    		echo "<br>";
+				                                    		//menentukan pemenang pertama
+				                                    		$dc = min(array_column($array_d, 'hasil'));
+				                                    		$iddc = array_search($dc, array_column($array_d, 'hasil') );
+				                                    		echo 'Dc = '.$dc;
+				                                    		echo "<br>";
+				                                    		$tdc = $array_d[$iddc]['target'];
+				                                    		echo 'Tdc = '.$tdc;
+				                                    		echo "<br>";
+				                                    		$tdcu = $array_d[$iddc]['urutan'];
+				                                    		echo 'urutan = '.$tdcu;
+
+				                                    	?>
+				                                    </td>
+				                                    <td>
+				                                    	<?php 
+				                                    		if($tb->target == $tdc){
+				                                    			echo 'True';
+				                                    			if($tb->target == 1){
+				                                    				$at1++;
+				                                    			}
+				                                    			elseif($tb->target == 2){
+				                                    				$et2++;
+				                                    			}
+				                                    			else{
+				                                    				$it3++;
+				                                    			}
+				                                    		}
+				                                    		else{
+				                                    			echo 'False';
+				                                    			if($tb->target == 1){
+				                                    				if($tdc==2){
+				                                    					$bf1++;
+				                                    				}
+				                                    				else{
+				                                    					$cf1++;
+				                                    				}
+				                                    				
+				                                    			}
+				                                    			elseif($tb->target == 2){
+				                                    				if($tdc==1){
+				                                    					$df2++;
+				                                    				}
+				                                    				else{
+				                                    					$ff2++;
+				                                    				}
+				                                    				
+				                                    			}
+				                                    			else{
+				                                    				if($tdc==1){
+				                                    					$gf3++;
+				                                    				}
+				                                    				else{
+				                                    				$hf3++;
+				                                    				}
+				                                    				
+				                                    			}
+				                                    		}
+
+				                                    	?>
+
+				                                    </td>
+				                                    
+				                                </tr>   
+				                                <?php 
+				                                	$no++;
+				                                	endforeach 
+				                                ?>
+				                            </tbody>
+			                            </table>
+
+                            	<?php
+                            	 	$alfa = $alfa - (0.01*$alfa);
+                            	 		else:
+
+                            	 			break;
+
+                            			endif;
+
+                            		endfor;
+                            	?>
+                            
+                            </div>
+                        </div>
+                        </div>
+                        </div>
+                    </div>            
+                </div>        
+            </div>    
+        </div>
+    </div>
+
+    <div class="row">    
+		<div class="col-lg-12">        
+			<div class="panel panel-default">            
+				<div class="panel-heading">
+                	<h2>Confusion Matrix untuk TB/U</h2>
+            	</div>             
+                <div class="panel-body" style="display: block;">                
+                    <div class="col-md-12">                        
+					<div class="content-box-large">
+					<div class="panel-heading">
+					<div class="panel-title">
+					</div>
+
+					<!--Start Bobot Akhir-->	
+						<div class="panel-body">
+							<table class="table table-hover">
+				              <thead>
+				                <tr class="success">
+				                  <th rowspan="2" colspan="2" >Class</th>
+				                  <th colspan="3">Prediksi</th>
+				                </tr>
+				                <tr class="success">
+				                  <th>SP</th>
+				                  <th>P</th>
+				                  <th>N</th>
+				                </tr>
+				              </thead>
+				              <tbody>
+				                <tr>
+				                  <td rowspan="4" class="success"> Target </td>
+				                  <td class="success"> SP </td>
+				                  <td>
+				                  	<?php 
+				                  		echo $at1;
+				                  	?>
+				                  </td>
+				                  <td>
+				                  	<?php 
+				                  		echo $bf1;
+				                  	?>
+				                  </td>
+				                  <td>
+				                  	<?php 
+				                  		echo $cf1;
+				                  	?>
+				                  </td>
+				                </tr>
+				                <tr>
+				                  <td class="success">P</td>
+				                  <td>
+				                  	<?php 
+				                  		echo $df2;
+				                  	?>
+				                  </td>
+				                  <td>
+				                  	<?php 
+				                  		echo $et2;
+				                  	?>
+				                  </td>
+				                  <td>
+				                  	<?php 
+				                  		echo $ff2;
+				                  	?>
+				                  </td>
+				                </tr>
+				                <tr>
+				                  <td class="success">N</td>
+				                  <td>
+				                  	<?php 
+				                  		echo $gf3;
+				                  	?>
+				                  </td>
+				                  <td>
+				                  	<?php 
+				                  		echo $hf3;
+				                  	?>
+				                  </td>
+				                  <td>
+				                  	<?php 
+				                  		echo $it3;
+				                  	?>
+				                  </td>
+				                </tr>
+				                
+				              </tbody>
+				            </table>			
+				            <?php 
+				            	
+				            	$akurasi = ($at1 + $et2 + $it3) / ($at1 + $bf1 + $cf1 + $df2 + $et2 + $ff2 + $gf3 + $hf3 + $it3) * 100;
+				            	echo "Akurasi = ".number_format($akurasi,2)."%";
+
+							$cekparameter = Parameter::findFirst('pembagian_data LIKE "%'.$pembagian.'%" and learning_rate LIKE "%'.$learning_rate.'%" and window LIKE "%'.$window.'%"');
+					        
+					        if( isset($cekparameter->id_parameter))
+					        {
+					            
+					            $id_parameter = $cekparameter->id_parameter;
+					        }
+						
+				           $nilaiparameter= Parameter::findFirst($id_parameter);
+
+							        
+							        $nilaiparameter->assign([
+							            'akurasi_tb' => number_format($akurasi,2),  
+
+							        ]);
+							        
+							        if ($nilaiparameter->save()) {
+							        }
+				            ?>		
+		  				</div>
+		  				<!--End Bobot Akhir-->
+
+					</div>
+					</div>
+					</div>            
+				</div>        
+			</div>    
+		</div>
+	</div>
+
+</body>
+</html>

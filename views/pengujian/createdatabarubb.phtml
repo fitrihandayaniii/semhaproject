@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Berat Badan</title>
+</head>
+<body>
+
+	<div class="row">    
+		<div class="col-lg-12">        
+			<div class="panel panel-default">            
+				<div class="panel-heading">
+                    <h2> 
+                    	Data Baru Balita Indeks BB/U
+                    </h2>
+                </div>             
+                <div class="panel-body" style="display: block;">                
+                    <div class="col-md-12">                        
+					<div class="content-box-large">
+					<div class="panel-heading">
+					<div class="panel-title">
+					</div>
+					<div class="panel-body">
+
+						<h3 >Form Data Baru</h3>
+		  					<form class="form-horizontal" role="form" method="post">
+		  						<div class="form-group">
+									<label class="col-sm-2 control-label">Nama</label>
+									<div class="col-sm-10">
+										<input type="text" name="nama" class="form-control">
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-2 control-label">Jenis Kelamin</label>
+									<div class="col-sm-10">
+										<select class="form-control" id="select-jk" type="text" name="jk">
+										<option></option>
+										<option>L</option>
+										<option>P</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-2 control-label">Umur</label>
+									<div class="col-sm-10">
+										<input type="int" name="umur" placeholder="1-60 Bulan" class="form-control">
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-2 control-label">Berat Badan</label>
+									<div class="col-sm-10">
+										<input type="int" name="berat" placeholder="Kg" class="form-control">
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-2 control-label">Cara Ukur</label>
+									<div class="col-sm-10">
+										<select class="form-control" id="select-crukur" type="text" name="cr_ukur">
+										<option></option>
+										<option>T</option>
+										<option>B</option>
+									</select>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-2 control-label">Vitamin A</label>
+									<div class="col-sm-10">
+										<select class="form-control" id="select-vita" type="text" name="vit_a">
+										<option></option>
+										<option>T</option>
+										<option>Y</option>
+									</select>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-2 control-label">Ekonomi</label>
+									<div class="col-sm-10">
+										<select class="form-control" id="select-ekonomi" type="text" name="ekonomi">
+										<option></option>
+										<option>Gakin</option>
+										<option>Non Gakin</option>
+									</select>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-2 control-label">Pendidikan Ibu</label>
+									<div class="col-sm-10">
+										<select class="form-control" id="select-pendidikan" type="text" name="pendidikan_ibu">
+										<option></option>
+										<option>SMP</option>
+										<option>SMA</option>
+										<option>Perguruan Tinggi</option>
+									</select>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-2 control-label">Pekerjaan Ayah</label>
+									<div class="col-sm-10">
+										<select class="form-control" id="select-pekerjaan" type="text" name="pekerjaan_ayah">
+										<option></option>
+										<option>Tani/Tukang</option>
+										<option>Wiraswasta</option>
+										<option>PNS</option>
+									</select>
+									</div>
+								</div>
+
+		  						<!-- <div class="form-group">
+								    <label for="indeks" class="col-sm-2 control-label">Indeks Antropometri</label>
+								    <div class="col-sm-10">
+								      <select class="form-control" id="indeks" name="indeks">
+											<option></option>
+											<option value="beratbadan">BB/U</option>
+											<option value="tinggibadan">TB/U</option>
+									</select> 
+								    </div>
+								</div>
+				            
+								<div class="form-group">
+								    <label for="bagidata" class="col-sm-2 control-label">Pembagian Data Latih dan Data Uji</label>
+								    <div class="col-sm-10">
+								      	<select class="form-control" id="bagidata" name="pembagian">
+											<option></option>
+											<option value="90">Pembagian 90:10</option>
+											<option value="80">Pembagian 80:20</option>
+										</select> 
+								    </div>
+								</div>
+
+								<div class="form-group">
+								    <label class="col-sm-2 control-label">Epoch</label>
+								    <div class="col-sm-10">
+								    	<span class="form-control">1</span>
+								    </div>
+								</div>
+
+								<div class="form-group">
+								    <label for="learningrate" class="col-sm-2 control-label">Learning Rate</label>
+								    <div class="col-sm-10">
+								    	<select class="form-control" id="learningrate" name="learning_rate">
+											<option></option>
+											<option value="0.025">0.025</option>
+											<option value="0.05">0.05</option>
+										</select> 
+								    </div>
+								</div>
+								 
+								<div class="form-group">
+								    <label class="col-sm-2 control-label">Minimum Learning Rate</label>
+								    <div class="col-sm-10">
+								    	<span class="form-control">0.01</span>
+								    </div>
+								</div>
+
+								<div class="form-group">
+								    <label for="window" class="col-sm-2 control-label">Window</label>
+								    <div class="col-sm-10">
+									    <select class="form-control" id="window" name="window">
+											<option></option>
+											<option value="0.2">0.2</option>
+											<option value="0.3">0.3</option>
+											<option value="0.4">0.4</option>
+										</select> 
+									    </div>
+								</div>
+
+								<div class="form-group">
+								    <label class="col-sm-2 control-label">Pengurangan Learning Rate</label>
+								    <div class="col-sm-10">
+								      	<span class="form-control">0.1</span>
+								    </div>
+								</div> -->
+
+								<div class="form-group">
+								    <div class="col-sm-offset-2 col-sm-10">
+								      	<button class="btn btn-success"><i class="glyphicon glyphicon-plus"></i> Tambah </button>
+								      	<a href="<?= $this->url->get('pengujian/databarubb') ?>" class="btn btn-defaultactive"  style="color: white; background-color: #5bc0de;background-color: #5bc0de"><i class="glyphicon glyphicon-eye-open"></i> Data Baru Berat Badan</a>
+								    </div>
+								</div>
+							</form>
+
+					</div>
+					</div>
+					</div>
+					</div>            
+				</div>        
+			</div>    
+		</div>
+	</div>
+
+</body>
+</html>

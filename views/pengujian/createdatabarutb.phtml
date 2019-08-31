@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tinggit Badan</title>
+</head>
+<body>
+
+	<div class="row">    
+		<div class="col-lg-12">        
+			<div class="panel panel-default">            
+				<div class="panel-heading">
+                    <h2> 
+                    	Data Baru Balita Indeks TB/U
+                    </h2>
+                </div>             
+                <div class="panel-body" style="display: block;">                
+                    <div class="col-md-12">                        
+					<div class="content-box-large">
+					<div class="panel-heading">
+					<div class="panel-title">
+					</div>
+					<div class="panel-body">
+
+						<h3 >Form Data Baru</h3>
+		  					<form class="form-horizontal" role="form" method="post">
+		  						<div class="form-group">
+									<label class="col-sm-2 control-label">Nama</label>
+									<div class="col-sm-10">
+										<input type="text" name="nama" class="form-control">
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-2 control-label">Jenis Kelamin</label>
+									<div class="col-sm-10">
+										<select class="form-control" id="select-jk" type="text" name="jk">
+										<option></option>
+										<option>L</option>
+										<option>P</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-2 control-label">Umur</label>
+									<div class="col-sm-10">
+										<input type="int" name="umur" placeholder="1-60 Bulan" class="form-control">
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-2 control-label">Tinggi Badan</label>
+									<div class="col-sm-10">
+										<input type="int" name="tinggi" placeholder="Cm" class="form-control">
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-2 control-label">Cara Ukur</label>
+									<div class="col-sm-10">
+										<select class="form-control" id="select-crukur" type="text" name="cr_ukur">
+										<option></option>
+										<option>T</option>
+										<option>B</option>
+									</select>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-2 control-label">Vitamin A</label>
+									<div class="col-sm-10">
+										<select class="form-control" id="select-vita" type="text" name="vit_a">
+										<option></option>
+										<option>T</option>
+										<option>Y</option>
+									</select>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-2 control-label">Ekonomi</label>
+									<div class="col-sm-10">
+										<select class="form-control" id="select-ekonomi" type="text" name="ekonomi">
+										<option></option>
+										<option>Gakin</option>
+										<option>Non Gakin</option>
+									</select>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-2 control-label">Pendidikan Ibu</label>
+									<div class="col-sm-10">
+										<select class="form-control" id="select-pendidikan" type="text" name="pendidikan_ibu">
+										<option></option>
+										<option>SMP</option>
+										<option>SMA</option>
+										<option>Perguruan Tinggi</option>
+									</select>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-2 control-label">Pekerjaan Ayah</label>
+									<div class="col-sm-10">
+										<select class="form-control" id="select-pekerjaan" type="text" name="pekerjaan_ayah">
+										<option></option>
+										<option>Tani/Tukang/</option>
+										<option>Wiraswasta</option>
+										<option>PNS</option>
+									</select>
+									</div>
+								</div>
+
+								<div class="form-group">
+								    <div class="col-sm-offset-2 col-sm-10">
+								      	<button class="btn btn-success"><i class="glyphicon glyphicon-plus"></i> Tambah </button>
+								      	<a href="<?= $this->url->get('pengujian/databarutb') ?>" class="btn btn-defaultactive"  style="color: white; background-color: #5bc0de;background-color: #5bc0de"><i class="glyphicon glyphicon-eye-open"></i> Data Baru Tinggi Badan</a>
+								    </div>
+								</div>
+							</form>
+
+					</div>
+					</div>
+					</div>
+					</div>            
+				</div>        
+			</div>    
+		</div>
+	</div>
+
+</body>
+</html>

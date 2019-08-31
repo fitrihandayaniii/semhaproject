@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Berat Badan</title>
+</head>
+<body>
+    <div class="row">    
+        <div class="col-lg-12">        
+            <div class="panel panel-default">
+            <div class="panel-heading">
+                <h1>Data Baru Balita</h1>
+            </div>             
+                <div class="panel-body" style="display: block;">                
+                    <div class="col-md-12">       
+                        <div class="content-box-large">
+                        <div class="panel-header">
+                        <div class="panel-title">
+                        </div>
+                        <div class="panel-body">
+                            <a href="<?= $this->url->get('beratbadan') ?>" class="btn btn-defaultactive"  style="color: white; background-color: #5bc0de;background-color: #5bc0de"><i class="glyphicon glyphicon-eye-open"></i> Data Berat Badan</a>
+                            <a href="<?= $this->url->get('pengujian/createdatabarubb') ?>" class="btn btn-success"><i class="glyphicon glyphicon-plus"></i> Data Baru BB/U</a>
+                            <a href="<?= $this->url->get('pengujian/normalisasidatabarubb') ?>" class="btn btn-default"><i class="glyphicon glyphicon-eye-open"></i> Normalisasi</a>
+                            <a href="<?= $this->url->get('pengujian/indexujidatabarubb') ?>" class="btn btn-default"><i class="glyphicon glyphicon-eye-open"></i> Uji Data Baru</a>
+
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                <thead>
+                                    <tr class="success">
+                                        <th>Id Balita</th>
+                                        <th>Nama</th>
+                                        <th>Jenis Kelamin</th>
+                                        <th>Umur</th>
+                                        <th>Berat Badan</th>
+                                        <th>Cara Ukur</th>
+                                        <th>Vitamin A</th>
+                                        <th>Status Ekonomi</th>
+                                        <th>Pendidikan Ibu</th>
+                                        <th>Pekerjaan Ayah</th>
+                                        <th>Status Gizi</th>
+                                        <th>Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php foreach ($beratbadan as $bb): ?>
+                                    <tr>
+                                        <td><?= $bb->id_balita ?></td> 
+                                        <td><?= $bb->nama ?></td>
+                                        <td><?= $bb->jk ?></td> 
+                                        <td><?= $bb->umur ?></td>
+                                        <td><?= $bb->berat ?></td>
+                                        <td><?= $bb->cr_ukur ?></td>
+                                        <td><?= $bb->vit_a ?></td>
+                                        <td><?= $bb->ekonomi ?></td>
+                                        <td><?= $bb->pendidikan_ibu ?></td>
+                                        <td><?= $bb->pekerjaan_ayah ?></td>
+                                        <td><?= $bb->status_gizi ?></td>
+                                        <td>
+                                            <a href="<?= $this->url->get('pengujian/bbbaru_edit/'.$bb->id_balita) ?>" class="btn btn-info"><i class="glyphicon glyphicon-edit"></i></a>
+                                            <a href="<?= $this->url->get('pengujian/deletebb/'.$bb->id_balita) ?>" class="btn btn-danger"> <i class="glyphicon glyphicon-trash"></i> </a>
+                                        </td>
+                                    </tr>   
+                                    <?php endforeach ?>
+                                </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        </div>
+                        </div>
+                    </div>            
+                </div>        
+            </div>    
+        </div>
+    </div>
+
+</body>
+</html>

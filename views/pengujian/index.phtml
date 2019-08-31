@@ -1,1 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User</title>
+</head>
+<body>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h2>Pengujian Learning Vector Quantization 3</h2>
+					</div>
+					<div class="panel-body" style="display: block;">
+						<div class="col-md-12">
+  					<div class="content-box-large">
+		  			
+		  				<div class="panel-body">
+		  					<h3 >Form Pengujian</h3>
+		  					<form class="form-horizontal" role="form" method="post">
+		  						<div class="form-group">
+								    <label for="indeks" class="col-sm-2 control-label">Indeks Antropometri</label>
+								    <div class="col-sm-10">
+								      <select class="form-control" id="indeks" name="indeks">
+													<option></option>
+													<option value="beratbadan">BB/U</option>
+													<option value="tinggibadan">TB/U</option>
+									</select> 
+								    </div>
+								  </div>
+				            
+										<div class="form-group">
+								    <label for="bagidata" class="col-sm-2 control-label">Pembagian Data Latih dan Data Uji</label>
+								    <div class="col-sm-10">
+								      <select class="form-control" id="bagidata" name="pembagian">
+													<option></option>
+													<option value="90">Pembagian 90:10</option>
+													<option value="80">Pembagian 80:20</option>
+									</select> 
+								    </div>
+								  </div>
 
+								  <div class="form-group">
+								    <label class="col-sm-2 control-label">Epoch</label>
+								    <div class="col-sm-10">
+								      <span class="form-control">1</span>
+								    </div>
+								  </div>
+								  <div class="form-group">
+								    <label for="learningrate" class="col-sm-2 control-label">Learning Rate</label>
+								    <div class="col-sm-10">
+								      <select class="form-control" id="learningrate" name="learning_rate">
+													<option></option>
+													<!-- <option value="0.015">0.015</option> -->
+													<option value="0.025">0.025</option>
+													<option value="0.075">0.075</option>
+													<option value="0.175">0.175</option>
+													<option value="0.3">0.3</option>
+													<!-- <option value="0.1">0.1</option>
+													<option value="0.125">0.125</option>
+													<option value="0.15">0.15</option>
+													<option value="0.2">0.2</option>
+													<option value="0.225">0.225</option>
+													<option value="0.25">0.25</option>
+													<option value="0.275">0.275</option>
+													<option value="0.4">0.4</option>
+													<option value="0.5">0.5</option>
+													<option value="0.6">0.6</option>
+													<option value="0.035">0.035</option>
+													<option value="0.045">0.045</option>
+													<option value="0.05">0.05</option>
+													<option value="0.055">0.055</option>
+													<option value="0.065">0.065</option>
+													<option value="0.085">0.085</option>
+													<option value="0.095">0.095</option>
+													<option value="0.01">0.01</option>
+													<option value="0.02">0.02</option>
+													<option value="0.03">0.03</option>
+													<option value="0.04">0.04</option>
+													<option value="0.06">0.06</option>
+													<option value="0.07">0.07</option>
+													<option value="0.08">0.08</option>
+													<option value="0.09">0.09</option> -->
+
+									</select> 
+								    </div>
+								  </div>
+								 
+								  <div class="form-group">
+								    <label class="col-sm-2 control-label">Minimum Learning Rate</label>
+								    <div class="col-sm-10">
+								      <span class="form-control">0.02</span>
+								    </div>
+								  </div>
+
+								  <div class="form-group">
+								    <label for="window" class="col-sm-2 control-label">Window</label>
+								    <div class="col-sm-10">
+								      <select class="form-control" id="window" name="window">
+													<option></option>
+													<!-- <option value="0.1">0.1</option> -->
+													<option value="0.2">0.2</option>
+													<option value="0.3">0.3</option>
+													<option value="0.4">0.4</option>
+													<!-- <option value="0.5">0.5</option>
+													<option value="0.6">0.6</option>
+													<option value="0.7">0.7</option>
+													<option value="0.8">0.8</option>
+													<option value="0.9">0.9</option> -->
+									</select> 
+								    </div>
+								  </div>
+
+								  <div class="form-group">
+								    <label class="col-sm-2 control-label">Pengurangan Learning Rate</label>
+								    <div class="col-sm-10">
+								      <span class="form-control">0.01</span>
+								    </div>
+								  </div>
+
+								  <div class="form-group">
+								    <div class="col-sm-offset-2 col-sm-10">
+								      <button type="submit" class="btn btn-primary">Proses</button>
+								      <a href="<?= $this->url->get('pengujian/createdatabarubb') ?>" class="btn btn-success"><i class="glyphicon glyphicon-plus"></i> Pengujian Data Baru Indeks BB/U</a>
+								      <a href="<?= $this->url->get('pengujian/createdatabarutb') ?>" class="btn btn-success"><i class="glyphicon glyphicon-plus"></i> Pengujian Data Baru Indeks TB/U</a>
+								    </div>
+								  </div>
+							</form>
+
+								<hr>
+
+								<!-- Start Tabel Parameter-->
+								<div class="form-group">
+									<h3>Parameter Pengujian Metode Learning Vector Quantization 3</h3>
+									<table class="table table-bordered">
+										<table class="table table-bordered">
+				                            <thead>
+				                                <tr class="success">
+				                                    <th>Id Parameter</th>
+				                                    <th>Pembagian Data</th>
+				                                    <th>Learning rate</th>
+				                                    <th>Window</th>
+				                                    <th>Akurasi BB</th>
+				                                    <th>Akurasi TB</th>
+				                                </tr>
+				                            </thead>
+				                            <tbody>
+										<?php 
+											$parameter = Parameter::find();
+
+											$tempbb = 0;
+											$temptb = 0;
+											$id_parameter_max_bb =0;
+											$id_parameter_max_tb =0;
+
+
+											foreach ($parameter as $nilaiparam): 
+												if($nilaiparam->akurasi_bb > $tempbb){
+													$tempbb = $nilaiparam->akurasi_bb;
+													$id_parameter_max_bb=$nilaiparam->id_parameter;
+												}
+												if($nilaiparam->akurasi_tb > $temptb){
+													$temptb = $nilaiparam->akurasi_tb;
+													$id_parameter_max_tb=$nilaiparam->id_parameter;
+												}
+										?>
+
+												<tr>
+				                                    <td><?php echo $nilaiparam->id_parameter;   ?></td>
+				                                    <td><?php echo $nilaiparam->pembagian_data;   ?></td>
+				                                    <td><?php echo $nilaiparam->learning_rate;   ?></td> 
+				                                    <td><?php echo $nilaiparam->window;   ?></td> 
+				                                    <td><?php echo $nilaiparam->akurasi_bb;   ?></td> 
+				                                    <td><?php echo $nilaiparam->akurasi_tb;   ?></td>
+				                                </tr>
+										<?php 
+											endforeach;
+										?>
+										</tbody>
+									</table>
+										<?php 
+
+
+
+										// foreach ($parameter as $bb): 
+										// 	if($bb->akurasi_bb > $temp){
+										// 		$temp = $bb->akurasi_bb;
+										// 		$id_parameter_max=$bb->id_parameter;
+										// 	}
+											
+										// 	// echo $tb->akurasi_tb."<br>" ;
+										// endforeach;
+
+										// echo $id_parameter_max;
+
+										$parameter_max_bb = Parameter::findFirst([
+									            'conditions'=>'id_parameter = "'.$id_parameter_max_bb.'"',
+										]);
+										$parameter_max_tb = Parameter::findFirst([
+									            'conditions'=>'id_parameter = "'.$id_parameter_max_tb.'"',
+										]);
+
+										// echo $parameter2->pembagian_data."<br>";
+										// echo $parameter2->learning_rate."<br>";
+
+										?>
+								</div>
+
+							<p>Proses Pengujian Indeks Antropometri Berat Badan Menurut Umur menghasilkan akurasi tertinggi sebesar <?php echo $parameter_max_bb->akurasi_bb ?> %.</p>
+							<p>Proses Pengujian Indeks Antropometri Tinggi Badan Menurut Umur menghasilkan akurasi tertinggi sebesar <?php echo $parameter_max_tb->akurasi_tb ?> %.</p>
+
+		  				</div>
+		  			</div>
+  				</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/.row-->
+</html>
+
+
+
+
+
+    
