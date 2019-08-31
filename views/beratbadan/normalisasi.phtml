@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Berat Badan</title>
+</head>
+<body>
+    <div class="row">    
+        <div class="col-lg-12">        
+            <div class="panel panel-default">            
+                <div class="panel-heading">
+                    <h1>Data Normalisasi Indeks Antropometri Berat Badan Menurut Umur</h1>
+                </div>             
+                <div class="panel-body" style="display: block;">                
+                    <div class="col-md-12">
+                        <div class="content-box-large">
+                        <div class="panel-header">
+                        <div class="panel-title">
+                        </div>
+                        
+                        <div class="panel-body">
+                            <a href="<?= $this->url->get('beratbadan/tahapnormalisasi') ?>" class="btn btn-warning"><i class="glyphicon glyphicon-refresh"></i> Proses</a>
+                            <a href="<?= $this->url->get('beratbadan') ?>" class="btn btn-default"><i class="glyphicon glyphicon-eye-open"></i> Data Berat Badan</a>
+                            <a href="<?= $this->url->get('beratbadan/normalisasi') ?>" class="btn btn-default active"  style="color: white; background-color: #5bc0de; background-color: #5bc0de"><i class="glyphicon glyphicon-eye-open"></i> Normalisasi</a>
+                            <a href="<?= $this->url->get('beratbadan/pembagianbb') ?>" class="btn btn-default"><i class="glyphicon glyphicon-eye-open"></i> Pembagian Data</a>
+                            <a href="<?= $this->url->get('beratbadan/bobotawal') ?>" class="btn btn-default"><i class="glyphicon glyphicon-eye-open"></i> Inisialisasi Bobot Awal</a>
+                            
+                            <div class="table-responsive">
+                            <table class="table table-bordered">
+                            <thead>
+                                <tr class="success">
+                                    <th>Id Balita</th>
+                                    <th>Nama</th>
+                                    <th>X1</th>
+                                    <th>X2</th>
+                                    <th>X3</th>
+                                    <th>X4</th>
+                                    <th>X5</th>
+                                    <th>X6</th>
+                                    <th>X7</th>
+                                    <th>X8</th>
+                                    <th>Target</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach ($beratbadan as $bb): ?>
+                                <tr>
+                                    <td><?= $bb->id_balita ?></td> 
+                                    <td><?= $bb->nama ?></td>
+                                    <td><?= $bb->x1 ?></td> 
+                                    <td><?= $bb->x2 ?></td>
+                                    <td><?= $bb->x3 ?></td>
+                                    <td><?= $bb->x4 ?></td>
+                                    <td><?= $bb->x5 ?></td>
+                                    <td><?= $bb->x6 ?></td>
+                                    <td><?= $bb->x7 ?></td>
+                                    <td><?= $bb->x8 ?></td>
+                                    <td><?= $bb->target ?></td>
+                                    
+                                </tr>   
+                                <?php endforeach ?>
+                            </tbody>
+                            </table>
+                            </div>
+                        </div>
+                        </div>
+                        </div>
+                    </div>            
+                </div>        
+            </div>    
+        </div>
+    </div>
+
+</body>
+</html>

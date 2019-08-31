@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit Berat Badan</title>
+</head>
+<body>
+
+	<div class="row">    
+		<div class="col-lg-12">        
+			<div class="panel panel-default">            
+				<div class="panel-heading">
+                    <h1>Edit Data Indeks Antropometri Berat Badan Menurut Umur</h1>
+                </div>             
+                <div class="panel-body" style="display: block;">                
+                    <div class="col-md-12">
+					<div class="content-box-large">
+					<div class="panel-heading">
+					<div class="panel-title">
+					</div>
+					<div class="panel-body">
+
+						<form class="form-horizontal" role="form" action="" method="post" >
+							<input type="hidden" name="id_balita" value="<?= $bb->id_balita ?>">
+							<div class="form-group">
+								<label for="nama" class="col-sm-2 control-label">Nama</label>
+								    <div class="col-sm-10">
+								    	<input type="text" name="nama" value="<?= $bb->nama ?>" class="form-control">
+									</div>
+							</div>
+
+							<div class="form-group">
+								<label for="jk" class="col-sm-2 control-label">Jenis Kelamin</label>
+								    <div class="col-sm-10">
+								    	<input type="text" name="jk" value="<?= $bb->jk ?>" class="form-control">
+									</div>
+							</div>
+
+							<div class="form-group">
+								<label for="umur" class="col-sm-2 control-label">Umur</label>
+								    <div class="col-sm-10">
+								    	<input type="int" name="umur" value="<?= $bb->umur ?>" class="form-control">
+									</div>
+							</div>
+							
+							<div class="form-group">
+								<label for="bb" class="col-sm-2 control-label">Berat Badan</label>
+								    <div class="col-sm-10">
+								    	<input type="int" name="berat" value="<?= $bb->berat ?>" class="form-control">
+									</div>
+							</div>
+
+							<div class="form-group">
+								<label for="cr_ukur" class="col-sm-2 control-label">Cara Ukur</label>
+								    <div class="col-sm-10">
+								    	<input type="text" name="cr_ukur" value="<?= $bb->cr_ukur ?>" class="form-control">
+									</div>
+							</div>
+
+							<div class="form-group">
+								<label for="cr_ukur" class="col-sm-2 control-label">Vitamin A</label>
+								    <div class="col-sm-10">
+								    	<input type="text" name="vit_a" value="<?= $bb->vit_a ?>" class="form-control">
+									</div>
+							</div>
+
+							<div class="form-group">
+								<label for="ekonomi" class="col-sm-2 control-label">Status Ekonomi</label>
+								    <div class="col-sm-10">
+								    	<input type="text" name="ekonomi" value="<?= $bb->ekonomi ?>" class="form-control">
+									</div>
+							</div>
+
+							<div class="form-group">
+								<label for="pendidikan_ibu" class="col-sm-2 control-label">Pendidikan Ibu</label>
+								    <div class="col-sm-10">
+								    	<input type="text" name="pendidikan_ibu" value="<?= $bb->pendidikan_ibu ?>" class="form-control">
+									</div>
+							</div>
+
+							<div class="form-group">
+								<label for="pekerjaan_ayah" class="col-sm-2 control-label">Pekerjaan Ayah</label>
+								    <div class="col-sm-10">
+								    	<input type="text" name="pekerjaan_ayah" value="<?= $bb->pekerjaan_ayah ?>" class="form-control">
+									</div>
+							</div>
+
+							<div class="form-group">
+								<label for="status_gizi" class="col-sm-2 control-label">Status Gizi</label>
+								    <div class="col-sm-10">
+								    	<input type="text" name="status_gizi" value="<?= $bb->status_gizi ?>" class="form-control">
+									</div>
+							</div>
+
+							<div class="form-group">
+								    <div class="col-sm-offset-2 col-sm-10">
+								      <button class="btn btn-success"><i class="glyphicon glyphicon-refresh"></i> Update</button>
+								      <button class="btn btn-danger">
+								<a href="<?= $this->url->get('beratbadan/index/')?>" ><i class="glyphicon glyphicon-remove"></i> Batal</a>
+							</button>
+								    </div>
+								  </div>
+
+							
+						</form>
+					</div>
+					</div>
+					</div>
+					</div>            
+				</div>        
+			</div>    
+		</div>
+	</div>
+
+</body>
+</html>
